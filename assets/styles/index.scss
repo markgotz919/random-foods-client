@@ -1,2 +1,27 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+
+h3 {}
+
+/*h2 displays the game message - win, tie, etc.*/
+
+h2 {
+  background-color: yellow;
+  height: 75px;
+  width: 300px;
+}
+
+
+.sign-up {
+    position: sticky;
+    width: 50%;
+    bottom: 300px;
+  }
+
+
+.border {
+    width: 25%;
+  }
+  
