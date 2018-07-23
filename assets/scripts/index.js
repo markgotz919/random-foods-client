@@ -103,6 +103,21 @@ var meals = {breakfast:[
     console.log(message)
   }
   
+  //function to display all meals
+
+//display all the meals
+function displayMeals(){
+ 
+  var html="";
+  for(var type in meals){
+    html +="<h3>" + type + "<button>add</button></h3>";
+    html +="<ul>";
+    for (let i=0; i<meals[type].length; i++){
+      html +="<li>" + meals[type][i]+"</li>";
+    }
+    html +="</ul>";
+  }
+ 
   
 
 })
