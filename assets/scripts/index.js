@@ -1,36 +1,24 @@
-'use strict'
+'use strict';
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
+const store = require('./store')
 
-// use require without a reference to ensure a file is bundled
-// require('./example')
+const authEvents = require('./auth/events.js')
+
 
 $(() => {
+  authEvents.addHandlers()
 
-  const store = require('./store')
-
-  const gameApi = require("./games/api-game")
-
-  const ui = require('./games/ui-game')
-
-  $(() => {
-    authEvents.addHandlers()
-  
-  })
-
-
-  
+})
 
 // user require with a reference to bundle the file and use it in this file
 // var example = require('./example');
 
 // load manifests
 // scripts
-require('./assets/scripts/index.js')
+//require('./assets/scripts/index.js')
 
 // styles
-require('./assets/styles/index.scss')
+//require('./assets/styles/index.scss')
 
 //need to write a function to load meals from the database
 
@@ -103,21 +91,4 @@ var meals = {breakfast:[
     console.log(message)
   }
   
-  //function to display all meals
-
-//display all the meals
-function displayMeals(){
- 
-  var html="";
-  for(var type in meals){
-    html +="<h3>" + type + "<button>add</button></h3>";
-    html +="<ul>";
-    for (let i=0; i<meals[type].length; i++){
-      html +="<li>" + meals[type][i]+"</li>";
-    }
-    html +="</ul>";
-  }
- 
   
-
-})

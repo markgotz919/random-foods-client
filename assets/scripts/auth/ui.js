@@ -19,8 +19,7 @@ const signInSuccess = function (data) {
   $('#message').css('background-color', 'green')
  
   store.user = data.user
-  $("#new-game").addClass("ready")
-  $("#get-games").addClass("ready")
+ 
 }
 
 const signInFailure = function (error) {
@@ -34,11 +33,7 @@ const signOutSuccess = function () {
   $('#message').css('background-color', 'green')
 
   store.user = null
-  $('main').removeClass("ready")
-  $("#new-game").removeClass("ready")
-  $("#get-games").removeClass("ready")
-  $("header h3").empty();
-  $("#allScores").empty();
+  
 }
 
 const signOutFailure = function (error) {
