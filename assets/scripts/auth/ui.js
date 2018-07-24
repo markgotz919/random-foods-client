@@ -19,7 +19,8 @@ const signInSuccess = function (data) {
   $('#message').css('background-color', 'green')
  
   store.user = data.user
- 
+  $("#change-password, #sign-out").show();
+  $("#sign-up, #sign-in").hide();
 }
 
 const signInFailure = function (error) {
@@ -33,7 +34,8 @@ const signOutSuccess = function () {
   $('#message').css('background-color', 'green')
 
   store.user = null
-  
+  $("#change-password, #sign-out").hide();
+  $("#sign-up, #sign-in").show();
 }
 
 const signOutFailure = function (error) {
