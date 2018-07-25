@@ -9,7 +9,8 @@ function showMeals(){
         //.then(ui.getMealsSuccess)
         .then((result) => {
             console.log(result)
-            allMealResults = result
+            const allMealResults = JSON.stringify(result)
+            $("#meals-list").text(allMealResults);
         })
 
         
@@ -33,8 +34,9 @@ const  addMeal=function(event){
 }
 
 const mealHandlers =  () => {
+    console.log("meal-handlers in events-meals.js")
     $('#show-meals').click(showMeals)
-    $('#add-meal').on('submit', addMeal)
+    $('#new-meal').on('submit', addMeal)
 }
 
 module.exports={

@@ -8,6 +8,7 @@ const mealEvents = require('./meals/events-meals.js')
 
 
 $(() => {
+  console.log("before handlers")
   mealEvents.mealHandlers()
   authEvents.addHandlers()
 $("#change-password, #sign-out").hide();
