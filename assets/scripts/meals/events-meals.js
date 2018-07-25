@@ -1,4 +1,4 @@
-'use strict';
+    'use strict';
 const api = require('./api-meals')
 const ui = require('./ui-meals')
 const getFormFields = require(`../../../lib/get-form-fields`)
@@ -10,7 +10,7 @@ function showMeals(){
         .then((result) => {
             console.log(result)
             const allMealResults = JSON.stringify(result)
-            $("#meals-list").text(allMealResults);
+            $("#meals").text(allMealResults);
         })
 
         
