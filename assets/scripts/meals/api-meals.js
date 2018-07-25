@@ -1,7 +1,7 @@
 const config = require("../config")
 const store = require("../store")
 
-const create = function (data) {
+const addMeal  = function (data) {
   console.log("reached create")
   return $.ajax({
     url: config.apiUrl + '/all_meals',
@@ -42,7 +42,7 @@ const getMeals = function () {
 }
 
 module.exports = {
-  create,
+  addMeal,
   update,
   getMeals
 

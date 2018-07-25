@@ -3,10 +3,12 @@
 const store = require('./store')
 
 const authEvents = require('./auth/events.js')
+const mealEvents = require('./meals/events-meals.js')
 
 
 
 $(() => {
+  mealEvents.mealHandlers()
   authEvents.addHandlers()
 $("#change-password, #sign-out").hide();
 $("#new-meal").hide();
@@ -93,5 +95,5 @@ var meals = {breakfast:[
   function messageDisplay(message) {
     console.log(message)
   }
-  
-  
+
+
