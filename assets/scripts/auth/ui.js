@@ -22,10 +22,10 @@ const signInSuccess = function (data) {
   $('#message').css('background-color', 'green')
  
   store.user = data.user
-  $("#change-password, #sign-out, #new-meal").show();
+  $("#change-password, #sign-out, #new-meal,#show-meals").show();
   $("#sign-up, #sign-in").hide();
   
-  mealEvents.init()
+
 }
 
 const signInFailure = function (error) {
