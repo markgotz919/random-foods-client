@@ -5,9 +5,11 @@ const store = require('./store')
 const authEvents = require('./auth/events.js')
 
 
+
 $(() => {
   authEvents.addHandlers()
 $("#change-password, #sign-out").hide();
+$("#new-meal").hide();
 })
 
 // user require with a reference to bundle the file and use it in this file
