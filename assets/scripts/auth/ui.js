@@ -22,7 +22,7 @@ const signInSuccess = function (data) {
   $('#message').css('background-color', 'green')
  
   store.user = data.user
-  $("#change-password, #sign-out, #new-meal,#show-meals").show();
+  $("#change-password, #sign-out, #new-meal,#show-meals, #delete-meal").show();
   $("#sign-up, #sign-in").hide();
   
 
@@ -39,7 +39,7 @@ const signOutSuccess = function () {
   $('#message').css('background-color', 'green')
 
   store.user = null
-  $("#change-password, #sign-out").hide();
+  $("#change-password, #sign-out, #new-meal,#show-meals,#delete-meal, #meals").hide();
   $("#sign-up, #sign-in").show();
 }
 

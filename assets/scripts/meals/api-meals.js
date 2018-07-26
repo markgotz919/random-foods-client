@@ -14,6 +14,20 @@ const addMeal  = function (data) {
 
 }
 
+const deleteMeal = function (data) {
+  console.log("reached delete")
+  console.log(data)
+  // return $.ajax({
+  //   url: config.apiUrl +'/all_meals'+ 
+  //   method: 'DELETE',
+  //   headers: {
+  //     Authorization: 'Token token=' +store.user.token
+  //   },  
+  //   data
+  // })
+
+}
+
 const update = function (data) {
  
   return $.ajax({
@@ -41,9 +55,12 @@ const getMeals = function () {
   })
 }
 
+
+
 module.exports = {
   addMeal,
   update,
-  getMeals
+  getMeals,
+  deleteMeal
 
 }

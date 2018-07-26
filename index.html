@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>RANDOM MEAL PICKER</h1>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <p id="message"></p>
-    
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>RANDOM MEAL PICKER</h1>
+
+  <p id="message"></p>
+
   <form id="sign-up" class="border">
     <fieldset>
       <legend>Sign up!</legend>
@@ -49,8 +51,8 @@
       <input type="submit" value="Sign Out!">
     </fieldset>
   </form>
-  
-  
+
+
   <button type="button" id="show-meals">Show My Meals!</button>
 
   <section id="meals"></section>
@@ -68,20 +70,28 @@
       <br>
       <input type="checkbox" name="all_meal[dinner]" id="dinner">
       <label for="dinner">dinner</label>
-      
-      <input type="submit" value="add my meal" id="add-meal">
-    </fieldset> 
 
-    <!-- <form id="delete-meal" class="border">
-        <fieldset>
-          <legend>delete meal</legend>
-          <input type="text" name="allMeal[meal]">
-          
-          
-          <input type="submit" value="delete meal" id="-meal"> -->
-          
-         
-    
-        </fieldset> 
+      <input type="submit" value="add my meal" id="add-meal">
+    </fieldset>
+  </form>
+
+  <form id="delete-meal" class="border">
+    <fieldset>
+      <legend>delete meal</legend>
+      <input type="text" name="all_Meal[meal]">
+      <br>
+      <input type="checkbox" name="all_meal[breakfast]" id="breakfast-delete">
+      <label for="breakfast">breakfast</label>
+      <br>
+      <input type="checkbox" name="all_meal[lunch]" id="lunch-delete">
+      <label for="lunch">lunch</label>
+      <br>
+      <input type="checkbox" name="all_meal[dinner]" id="dinner-delete">
+      <label for="dinner">dinner</label>
+
+      <input type="submit" value="delete my meal" id="negate-meal">
+
+    </fieldset>
+  </form>
 
 </html>
