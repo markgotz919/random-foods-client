@@ -21,8 +21,25 @@ function getMealsFailure(error){
   $('#message').css('background-color', 'red')
 }
 
+function addMealSuccess(form){
+  $('#message').text('Your meal has been added')
+  $('#message').css('background-color', 'green')
+  form.reset()
+  $('#show-meals').click()
+}
+
+function addMealFailure(error){
+  console.log(error)
+  $('#message').text('Error on adding meal')
+  $('#message').css('background-color', 'red')
+  
+}
+
+
 module.exports = {
   updateSuccess,
-  updateFailure
+  updateFailure,
+  addMealSuccess,
+  addMealFailure
   
 }
