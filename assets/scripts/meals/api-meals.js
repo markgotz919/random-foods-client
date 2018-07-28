@@ -1,6 +1,8 @@
 const config = require("../config")
 const store = require("../store")
 
+// CREATE MEAL
+
 const addMeal  = function (data) {
   console.log("reached create")
   return $.ajax({
@@ -13,6 +15,8 @@ const addMeal  = function (data) {
   })
 
 }
+
+//DELETE MEAL
 
 const deleteMeal = function (data) {
   console.log("reached delete")
@@ -28,6 +32,8 @@ const deleteMeal = function (data) {
 
 }
 
+//UPDATE MEAL 
+
 const update = function (data) {
  
   return $.ajax({
@@ -41,6 +47,7 @@ const update = function (data) {
   })
 }
 
+//GET MEALS
 
 const getMeals = function () {
   console.log("this is api-meals, get meals")

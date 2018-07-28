@@ -78,20 +78,18 @@
   <form id="delete-meal" class="border">
     <fieldset>
       <legend>delete meal</legend>
-      <input type="text" name="all_Meal[meal]">
-      <br>
-      <input type="checkbox" name="all_meal[breakfast]" id="breakfast-delete">
-      <label for="breakfast">breakfast</label>
-      <br>
-      <input type="checkbox" name="all_meal[lunch]" id="lunch-delete">
-      <label for="lunch">lunch</label>
-      <br>
-      <input type="checkbox" name="all_meal[dinner]" id="dinner-delete">
-      <label for="dinner">dinner</label>
-
+      <input type="text" name="all_meal[id]" placeholder="meal ID here">
       <input type="submit" value="delete my meal" id="negate-meal">
-
     </fieldset>
   </form>
 
+
+  <form id="update-meal" class="border">
+    <fieldset>
+      <legend>update-meal</legend>
+      <input type="text" name="all_Meal[meal]" placeholder="meal ID Here">
+      <input type="submit" value="update my meal" id="patch-meal">
+    </fieldset>
+  </form>
+</body>
 </html>

@@ -15,6 +15,7 @@ $("#change-password, #sign-out").hide();
 $("#new-meal").hide();
 $("#show-meals").hide();
 $("#delete-meal").hide();
+$("#update-meal").hide()
 })
 
 // user require with a reference to bundle the file and use it in this file
