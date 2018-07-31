@@ -21,23 +21,23 @@ const addMeal  = function (data) {
 const deleteMeal = function (data) {
   console.log("reached delete")
   console.log(data)
-  // return $.ajax({
-  //   url: config.apiUrl +'/all_meals'+ 
-  //   method: 'DELETE',
-  //   headers: {
-  //     Authorization: 'Token token=' +store.user.token
-  //   },  
-  //   data
-  // })
+  return $.ajax({
+    url: config.apiUrl +'/all_meals/'+  data.all_meal.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' +store.user.token
+    },  
+    data
+  })
 
 }
 
 //UPDATE MEAL 
 
-const update = function (data) {
+const updateMeal = function (data) {
  
   return $.ajax({
-    url: config.apiUrl + '/all_meals' + store.meal.id,
+    url: config.apiUrl + '/all_meals/'+ data.all_meal.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -66,7 +66,7 @@ const getMeals = function () {
 
 module.exports = {
   addMeal,
-  update,
+  updateMeal,
   getMeals,
   deleteMeal
 
