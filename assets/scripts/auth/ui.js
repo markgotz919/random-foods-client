@@ -39,7 +39,7 @@ const signOutSuccess = function () {
   $('#message').css('background-color', 'green')
 
   store.user = null
-  $("#change-password, #sign-out, #new-meal,#show-meals,#delete-meal, #meals,#update-meals").hide();
+  $("#change-password, #sign-out, #new-meal,#show-meals,#delete-meal, #meals,#update-meal").hide();
   $("#sign-up, #sign-in").show();
 }
 

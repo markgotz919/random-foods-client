@@ -7,6 +7,7 @@ const updateSuccess = function () {
 const updateFailure = function (error) {
   $('#message').text('Error on update')
   $('#message').css('background-color', 'red')
+  form.reset()
   
 }
 
@@ -32,6 +33,8 @@ function addMealFailure(error){
   console.log(error)
   $('#message').text('Error on adding meal')
   $('#message').css('background-color', 'red')
+  form.reset()
+
   
 }
 
@@ -47,6 +50,7 @@ function deleteMealFailure(error){
   console.log(error)
   $('#message').text('Error on deleting')
   $('#message').css('background-color', 'red')
+  $('#delete-meal').trigger('reset')
 }
 
 
@@ -64,6 +68,8 @@ function updateMealFailure(error){
   console.log(error)
   $('#message').text('Error on updating meal')
   $('#message').css('background-color', 'red')
+  $('#update-meal').trigger('reset')
+  
 }
 
 
@@ -73,6 +79,8 @@ module.exports = {
   addMealSuccess,
   addMealFailure,
   deleteMealSuccess,
-  updateMealSuccess
+  updateMealSuccess,
+  updateMealFailure,
+  deleteMealFailure
   
 }

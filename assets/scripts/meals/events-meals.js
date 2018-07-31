@@ -89,6 +89,7 @@
       const data = getFormFields(this)
       api.deleteMeal(data)
       .then((result) => {
+        
         console.log(result)
         //newMeal = result
         ui.deleteMealSuccess(this)
@@ -103,7 +104,7 @@
         api.updateMeal(data)
         .then((result) => {
           console.log(result)
-          //newMeal = result
+          
           ui.updateMealSuccess(this)
         })
         .catch(ui.updateMealFailure)
