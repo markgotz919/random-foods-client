@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>RANDOM MEAL PICKER</h1>
+
+  <p id="message"></p>
+
+  <form id="sign-up" class="border">
+    <fieldset>
+      <legend>Sign up!</legend>
+      <input type="text" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+      <input type="submit" value="Sign up!">
+    </fieldset>
+  </form>
+  <form id="sign-in" class="border">
+    <fieldset>
+      <legend>Sign in!</legend>
+      <input type="text" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="submit" value="Sign in!">
+    </fieldset>
+  </form>
+
+  <form id="change-password" class="border">
+    <fieldset>
+      <legend>Change Password!</legend>
+      <input type="password" name="passwords[old]" placeholder="Old Password">
+      <input type="password" name="passwords[new]" placeholder="New Password">
+      <input type="submit" value="Change Password!">
+    </fieldset>
+  </form>
+
+  <form id="sign-out" class="border">
+    <fieldset>
+      <legend>Sign Out!</legend>
+      <input type="submit" value="Sign Out!">
+    </fieldset>
+  </form>
+
+
+  <button type="button" id="show-meals">Show My Meals!</button>
+
+  <section id="meals"></section>
+
+  <form id="new-meal" class="border">
+    <fieldset>
+      <legend>add meal</legend>
+      <input type="text" name="all_meal[meal]" placeholder="enter meal here">
+      <br>
+      <input type="checkbox" name="all_meal[breakfast]" id="breakfast">
+      <label for="breakfast">breakfast</label>
+      <br>
+      <input type="checkbox" name="all_meal[lunch]" id="lunch">
+      <label for="lunch">lunch</label>
+      <br>
+      <input type="checkbox" name="all_meal[dinner]" id="dinner">
+      <label for="dinner">dinner</label>
+
+      <input type="submit" value="add my meal" id="add-meal">
+    </fieldset>
+  </form>
+
+  <form id="delete-meal" class="border">
+    <fieldset>
+      <legend>delete meal</legend>
+      <input type="text" name="all_meal[id]" placeholder="meal ID here">
+      <input type="submit" value="delete my meal" id="negate-meal">
+    </fieldset>
+  </form>
+
+
+  <form id="update-meal" class="border">
+    <fieldset>
+      <legend>update-meal</legend>
+      <input type="text" name="all_meal[id]" placeholder="meal ID Here">
+      <input type="text" name="all_meal[meal]" placeholder="type corrected meal">
+      <input type="submit" value="update my meal" id="patch-meal">
+    </fieldset>
+  </form>
+</body>
+</html>
