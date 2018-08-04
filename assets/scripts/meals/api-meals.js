@@ -4,7 +4,7 @@ const store = require("../store")
 // CREATE MEAL
 
 const addMeal  = function (data) {
-  console.log("reached create")
+  // console.log("reached create")
   return $.ajax({
     url: config.apiUrl + '/all_meals',
     method: 'POST',
@@ -19,8 +19,8 @@ const addMeal  = function (data) {
 //DELETE MEAL
 
 const deleteMeal = function (data) {
-  console.log("reached delete")
-  console.log(data)
+  // console.log("reached delete")
+  // console.log(data)
   return $.ajax({
     url: config.apiUrl +'/all_meals/'+  data.all_meal.id,
     method: 'DELETE',
@@ -50,7 +50,7 @@ const updateMeal = function (data) {
 //GET MEALS
 
 const getMeals = function () {
-  console.log("this is api-meals, get meals")
+  // console.log("this is api-meals, get meals")
   return $.ajax({
     url: config.apiUrl + '/all_meals',
     method: 'GET',

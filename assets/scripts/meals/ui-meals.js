@@ -12,12 +12,12 @@ const updateFailure = function (error) {
 }
 
 const getMealsSuccess = function (data){
-  console.log("get meals successful",data)
+  // console.log("get meals successful",data)
 
 }
 
 function getMealsFailure(error){
-  console.log(error)
+  // console.log(error)
   $('#message').text('Error on retrieval')
   $('#message').css('background-color', 'red')
 }
@@ -30,7 +30,7 @@ function addMealSuccess(form){
 }
 
 function addMealFailure(error){
-  console.log(error)
+  // console.log(error)
   $('#message').text('Error on adding meal')
   $('#message').css('background-color', 'red')
   form.reset()
@@ -47,7 +47,7 @@ function deleteMealSuccess(form){
 }
 
 function deleteMealFailure(error){
-  console.log(error)
+  // console.log(error)
   $('#message').text('Error on deleting')
   $('#message').css('background-color', 'red')
   $('#delete-meal').trigger('reset')
@@ -65,7 +65,7 @@ function updateMealSuccess(form){
 
 
 function updateMealFailure(error){
-  console.log(error)
+  // console.log(error)
   $('#message').text('Error on updating meal')
   $('#message').css('background-color', 'red')
   $('#update-meal').trigger('reset')

@@ -8,7 +8,7 @@ const mealEvents = require('./meals/events-meals.js')
 
 
 $(() => {
-  console.log("before handlers")
+  // console.log("before handlers")
   mealEvents.mealHandlers()
   authEvents.addHandlers()
 $("#change-password, #sign-out").hide();
@@ -23,34 +23,34 @@ $("#update-meal").hide()
 
 // load manifests
 // scripts
-//require('./assets/scripts/index.js')
+// require('./assets/scripts/index.js')
 
 // styles
-//require('./assets/styles/index.scss')
+// require('./assets/styles/index.scss')
 
 //need to write a function to load meals from the database
 
 // meals object to use until database is connected
-var meals = {breakfast:[
-    "pancakes",
-    "frenchtoast",
-    "cereal",
-    "eggs",
-    "fruit"
-    ],
-               lunch:[
-    "ham and cheese sandwich",
-    "hamburger",
-    "hotdog",
-    "salad"        
-     ],
-               dinner:[
-      "pasta",
-      "stir-fry chicken with veggies",
-      "vegetable lasagna",
-      "fish with baked potatoes and vegetables"
-               ]
-  }
+// var meals = {breakfast:[
+//     "pancakes",
+//     "frenchtoast",
+//     "cereal",
+//     "eggs",
+//     "fruit"
+//     ],
+//                lunch:[
+//     "ham and cheese sandwich",
+//     "hamburger",
+//     "hotdog",
+//     "salad"        
+//      ],
+//                dinner:[
+//       "pasta",
+//       "stir-fry chicken with veggies",
+//       "vegetable lasagna",
+//       "fish with baked potatoes and vegetables"
+//                ]
+//   }
   
   //function to add a meal and update database
   

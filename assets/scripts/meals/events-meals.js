@@ -6,11 +6,11 @@
     ////// SHOW MEALS//////
 
     function showMeals() {
-      console.log("showMeals")
+      // console.log("showMeals")
       api.getMeals()
         //.then(ui.getMealsSuccess)
         .then((result) => {
-          console.log(result.all_meals)
+          // console.log(result.all_meals)
           const allMealResults = result.all_meals
           const breakfast = allMealResults.filter(m => m.breakfast)
           const lunch = allMealResults.filter(m => m.lunch)
@@ -68,12 +68,12 @@
 
     const addMeal = function (event) {
       event.preventDefault()
-      console.log("addMeal")
+      // console.log("addMeal")
       const data = getFormFields(this)
-      console.log(data)
+      // console.log(data)
       api.addMeal(data)
         .then((result) => {
-          console.log(result)
+          // console.log(result)
           //newMeal = result
           ui.addMealSuccess(this)
         })
@@ -85,12 +85,12 @@
 
     const deleteMeal = function (event) {
       event.preventDefault()
-      console.log("deleteMeal")
+      // console.log("deleteMeal")
       const data = getFormFields(this)
       api.deleteMeal(data)
       .then((result) => {
         
-        console.log(result)
+        // console.log(result)
         //newMeal = result
         ui.deleteMealSuccess(this)
       })
@@ -99,11 +99,11 @@
     ////// UPDATE A MEAL//////
     const updateMeal = function (event) {
         event.preventDefault()
-        console.log("updateMeal")
+        // console.log("updateMeal")
         const data = getFormFields(this)
         api.updateMeal(data)
         .then((result) => {
-          console.log(result)
+          // console.log(result)
           
           ui.updateMealSuccess(this)
         })
@@ -113,7 +113,7 @@
 
 
     const mealHandlers = () => {
-      console.log("meal-handlers in events-meals.js")
+      // console.log("meal-handlers in events-meals.js")
       $('#show-meals').click(showMeals)
       $('#new-meal').on('submit', addMeal)
       $('#delete-meal').on('submit', deleteMeal)
